@@ -1,0 +1,21 @@
+@paletteHeight: 80px;
+@paletteFontSize: 15px;
+@palettePadding: (@paletteHeight - (@paletteFontSize)) / 2;
+
+
+.colorPalette (@color) {
+  height: @paletteHeight;
+  background: @color;
+  font-size: @paletteFontSize;
+  padding: @palettePadding 0;
+  text-align: center;
+
+  &:before {
+    content: attr(id);
+    text-transform: uppercase;
+    color: @clouds;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
